@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book List View</title>
+</head>
+<body>
+    <h2>List of books</h2>
+    {% for book in object_list %}
+    <h4>{{book.title}}</h4>
+    <p>{{book.subtitle}}</p>
+    <p>By: {{book.author}}</p>
+    <small>ISBN: {{book.isbn}}</small>
+    <hr>
+    {% empty %}
+    <p>No books yet</p>
+
+    {% endfor%}
+</body>
+</html>
